@@ -24,7 +24,6 @@ const copy = {
       `主题：${current}，点击切换为${next}`,
     langAria: "语言",
     heroRole: "个人开发者",
-    heroWorks: "07 / 作品",
     heroLead: "科技让生活更美好",
     heroLeadAi: "拥抱 AI",
     worksKicker: "索引",
@@ -38,7 +37,7 @@ const copy = {
     contactEmail: "邮箱",
     documentTitle: "ByteRoger · 个人开发者",
     documentDescription:
-      "科技让生活更美好，拥抱 AI。ByteRoger 的作品索引：小宝日记、华夏迹、每日猜成语、我的物品、炸金花、Tank Arena 与本地办公。",
+      "科技让生活更美好，拥抱 AI。ByteRoger 的作品索引：小宝日记、华夏迹、每日猜成语、我的物品、炸金花、Tank Arena、本地办公与 WebSnap。",
   },
   en: {
     skip: "Skip to works",
@@ -54,7 +53,6 @@ const copy = {
       `Theme: ${current}. Click to switch to ${next}`,
     langAria: "Language",
     heroRole: "Independent developer",
-    heroWorks: "07 / Works",
     heroLead: "Technology makes life better",
     heroLeadAi: "Embrace AI",
     worksKicker: "Index",
@@ -70,7 +68,7 @@ const copy = {
     contactEmail: "Email",
     documentTitle: "ByteRoger · Independent developer",
     documentDescription:
-      "Technology makes life better. Embrace AI. Works by ByteRoger: HelloBaby, Sinatrail, Daily Idiom, My Items, Zha Jin Hua, Tank Arena, and Local Office.",
+      "Technology makes life better. Embrace AI. Works by ByteRoger: HelloBaby, Sinatrail, Daily Idiom, My Items, Zha Jin Hua, Tank Arena, Local Office, and WebSnap.",
   },
 } as const;
 

@@ -7,6 +7,8 @@ export type Work = {
   href: string;
   summary: Localized;
   tags: Localized[];
+  applicationCategory?: string;
+  operatingSystem?: string;
 };
 
 export const works: Work[] = [
@@ -28,7 +30,7 @@ export const works: Work[] = [
     id: "huaxiaji",
     index: "02",
     name: { zh: "华夏迹", en: "Sinatrail" },
-    href: "https://huaxiaji.zecrs.com",
+    href: "https://china.zecrs.com/",
     summary: {
       zh: "中国互动地图，收藏足迹，发现名胜与古迹。",
       en: "An interactive map of China — collect trails, find landmarks.",
@@ -104,5 +106,21 @@ export const works: Work[] = [
       { zh: "本地优先", en: "Local-first" },
       { zh: "文档", en: "Docs" },
     ],
+  },
+  {
+    id: "websnap",
+    index: "08",
+    name: { zh: "WebSnap", en: "WebSnap" },
+    href: "https://chromewebstore.google.com/detail/websnap/lekllokjgmdnidpkhmfbbhoiagkpilfp",
+    summary: {
+      zh: "网页截图、长图与区域截图。自动命名，本地管理，支持 OCR。",
+      en: "Capture a page, a long scroll, or a region. Auto-named, local library, OCR.",
+    },
+    tags: [
+      { zh: "Chrome 插件", en: "Chrome" },
+      { zh: "截图", en: "Screenshot" },
+    ],
+    applicationCategory: "BrowserApplication",
+    operatingSystem: "Chrome",
   },
 ];

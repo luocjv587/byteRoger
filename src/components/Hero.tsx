@@ -1,3 +1,4 @@
+import { works } from "../data/works";
 import { getCopy } from "../i18n/copy";
 import { useCurrentLocale } from "../i18n/useCurrentLocale";
 import "./Hero.css";
@@ -5,6 +6,7 @@ import "./Hero.css";
 export function Hero() {
   const { locale } = useCurrentLocale();
   const text = getCopy(locale);
+  const workCount = String(works.length).padStart(2, "0");
 
   return (
     <section className="hero" aria-labelledby="hero-title">
@@ -18,7 +20,9 @@ export function Hero() {
         <p className="hero__meta">
           <span>{text.heroRole}</span>
           <span className="hero__rule" />
-          <span>{text.heroWorks}</span>
+          <span>
+            {workCount} / {text.worksTitle}
+          </span>
         </p>
         <h1 id="hero-title" className="hero__title">
           ByteRoger

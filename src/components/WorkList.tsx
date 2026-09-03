@@ -18,7 +18,7 @@ export function WorkList() {
       <div className="wrap">
         <div className="section-kicker">
           <span>{text.worksKicker}</span>
-          <span>01 — 07</span>
+          <span>01 — {String(works.length).padStart(2, "0")}</span>
         </div>
         <h2 className="works__title">{text.worksTitle}</h2>
         <ol className="work-list">
