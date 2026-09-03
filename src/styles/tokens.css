@@ -1,0 +1,58 @@
+:root {
+  --font-sans: "IBM Plex Sans Variable", "IBM Plex Sans", ui-sans-serif, system-ui,
+    "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei",
+    sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas,
+    monospace;
+
+  --page-pad: clamp(1.25rem, 4vw, 3.5rem);
+  --page-max: 68rem;
+  --header-h: 4.25rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  color-scheme: dark;
+  --bg: #0b0c0e;
+  --bg-elev: #121418;
+  --ink: #e8e6e1;
+  --ink-soft: #a8a59c;
+  --ink-faint: #6e6b64;
+  --line: rgba(232, 230, 225, 0.12);
+  --line-strong: rgba(232, 230, 225, 0.22);
+  --grid: rgba(232, 230, 225, 0.045);
+  --accent: #7dffd3;
+  --accent-ink: #06281e;
+  --noise: 0.045;
+  --header-bg: rgba(11, 12, 14, 0.62);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b0c0e;
+  --bg-elev: #121418;
+  --ink: #e8e6e1;
+  --ink-soft: #a8a59c;
+  --ink-faint: #6e6b64;
+  --line: rgba(232, 230, 225, 0.12);
+  --line-strong: rgba(232, 230, 225, 0.22);
+  --grid: rgba(232, 230, 225, 0.045);
+  --accent: #7dffd3;
+  --accent-ink: #06281e;
+  --noise: 0.045;
+  --header-bg: rgba(11, 12, 14, 0.62);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f2ec;
+  --bg-elev: #fffdf8;
+  --ink: #141414;
+  --ink-soft: #5c5a55;
+  --ink-faint: #8a877f;
+  --line: rgba(20, 20, 20, 0.1);
+  --line-strong: rgba(20, 20, 20, 0.2);
+  --grid: rgba(20, 20, 20, 0.045);
+  --accent: #0f6b56;
+  --accent-ink: #f4f2ec;
+  --noise: 0.035;
+  --header-bg: rgba(244, 242, 236, 0.7);
+}

@@ -1,0 +1,143 @@
+.works {
+  padding-block: 2.5rem 5rem;
+}
+
+.works__title {
+  margin-bottom: 1.75rem;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.work-list {
+  border-top: 1px solid var(--line);
+}
+
+.work-item {
+  border-bottom: 1px solid var(--line);
+  transition: opacity 280ms var(--ease);
+}
+
+.work-item__row {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 1rem 1.25rem;
+  padding-block: 1.2rem;
+}
+
+.work-item__index {
+  padding-top: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+}
+
+.work-item__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.65rem 0.9rem;
+}
+
+.work-item__head h3 {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.work-item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.work-item__tags li {
+  padding: 0.12rem 0.45rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+}
+
+.work-item__desc {
+  display: grid;
+  grid-template-rows: 0fr;
+  margin-top: 0;
+  opacity: 0;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+  transition: grid-template-rows 320ms var(--ease), opacity 240ms var(--ease),
+    margin-top 320ms var(--ease);
+}
+
+.work-item__desc > span {
+  overflow: hidden;
+}
+
+.work-item__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.2rem;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.work-item__link:hover {
+  color: var(--accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .work-list:hover .work-item {
+    opacity: 0.36;
+  }
+
+  .work-list:hover .work-item:hover,
+  .work-list:hover .work-item:focus-within {
+    opacity: 1;
+  }
+
+  .work-item:hover .work-item__desc,
+  .work-item:focus-within .work-item__desc {
+    grid-template-rows: 1fr;
+    margin-top: 0.55rem;
+    opacity: 1;
+  }
+}
+
+.work-item.is-open .work-item__desc {
+  grid-template-rows: 1fr;
+  margin-top: 0.55rem;
+  opacity: 1;
+}
+
+@media (max-width: 720px) {
+  .work-item__row {
+    grid-template-columns: 1fr auto;
+    gap: 0.45rem 1rem;
+  }
+
+  .work-item__index {
+    grid-column: 1;
+    padding-top: 0;
+  }
+
+  .work-item__copy {
+    grid-column: 1;
+  }
+
+  .work-item__link {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    margin-top: 0;
+  }
+}
